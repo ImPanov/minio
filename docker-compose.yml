@@ -14,11 +14,6 @@ services:
       MINIO_ROOT_PASSWORD: minio123
     volumes:
       - minio-storage:/data
-      - ./certs:/root/.minio/certs
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 20s
-      retries: 2
+      - ./certs:/root/.minio/
 volumes:
   minio-storage:
