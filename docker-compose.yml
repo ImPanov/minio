@@ -19,6 +19,6 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
       timeout: 20s
-      retries: 3
+      retries: 2
 volumes:
   minio-storage:
